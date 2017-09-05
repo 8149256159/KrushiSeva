@@ -1,10 +1,25 @@
 
-const Dashboard = {
-    text: 'Dashboard',
-    link: '/dashboard',
-    icon: 'fa fa-table',
+
+const manageProduct = {
+    text: 'Manage Product',
+    link: '/manageproduct',
+    icon: 'fa fa-product-hunt',
     active: true,
-    activeLinks: ['/dashboard']
+    activeLinks: ['/manageproduct']
+};
+const manageProfile = {
+    text: 'Manage Profile',
+    link: '/manageprofile',
+    icon: 'fa fa-user-circle',
+    active: false,
+    activeLinks: ['/manageprofile']
+};
+const manageMasterdata = {
+    text: 'Manage Masterdata',
+    link: '/managemasterdata',
+    icon: 'fa fa-table',
+    active: false,
+    activeLinks: ['/managemasterdata']
 };
 
 const headingMain = {
@@ -14,12 +29,16 @@ const headingMain = {
 
 
 export const menu = [
-    Dashboard
+    manageProduct,
+    manageProfile,
+    manageMasterdata
 
 ];
 
 export const navigationMenu = [
-    Dashboard
+    manageProduct,
+    manageProfile,
+    manageMasterdata
 ];
 
 

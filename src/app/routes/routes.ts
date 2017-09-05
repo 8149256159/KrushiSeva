@@ -6,14 +6,15 @@ export const routes = [
         path: '',
         component: LayoutComponent,
         children: [
-            { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-            { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
-     
+            { path: '', redirectTo: 'login', pathMatch: 'full' },
+            { path: 'manageproduct', loadChildren: './manage-product/manage-product.module#ManageProductModule' },
+            { path: 'manageprofile', loadChildren: './manage-profile/manage-profile.module#ManageProfileModule' },
+            { path: 'managemasterdata', loadChildren: './dashboard/dashboard.module#DashboardModule' }
         ]
     },
 
 
     // Not found
-    { path: '**', redirectTo: 'dashboard' }
+    { path: '**', redirectTo: 'login' }
 
 ];
