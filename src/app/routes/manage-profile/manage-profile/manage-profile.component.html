@@ -1,3 +1,89 @@
-<p>
-  manage-profile works!
-</p>
+<div class="content-heading">
+    Manage Profile
+</div>
+<div class="home-container">
+    <div class="jumbotron profilejumbotron">
+        <div class="text-right" *ngIf="!edit">
+            <a class="btn btn-link" (click)="editProfile()"><strong class="f-15">Edit Profile</strong></a>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <form [formGroup]="profileForm" class="form-validate form-horizontal" (submit)="saveProfile()" novalidate="">
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Name of Krushi Seva Kendra &nbsp;:</label>
+                    <div class="col-sm-6 p-t-8" *ngIf="!edit">
+                        <span>Swapnil Krushi Seva Kendra</span>
+                    </div>
+                    <div class="col-sm-6" *ngIf="edit">
+                        <input class="form-control" type="text" formControlName="sometext" />
+                        <span class="text-danger" *ngIf="profileForm.controls.sometext.hasError('required') && (profileForm.controls.sometext.dirty || profileForm.controls.sometext.touched)">This field is required</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">User Name &nbsp;:</label>
+                    <div class="col-sm-6 p-t-8" *ngIf="!edit">
+                        <span>swapnil</span>
+                    </div>
+                    <div class="col-sm-6" *ngIf="edit">
+                        <input class="form-control" type="text" formControlName="sometext" />
+                        <span class="text-danger" *ngIf="profileForm.controls.sometext.hasError('required') && (profileForm.controls.sometext.dirty || profileForm.controls.sometext.touched)">This field is required</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Mobile No. &nbsp;:</label>
+                    <div class="col-sm-6 p-t-8" *ngIf="!edit">
+                        <span>0123456789</span>
+                    </div>
+                    <div class="col-sm-6" *ngIf="edit">
+                        <input class="form-control" type="text" formControlName="sometext" />
+                        <span class="text-danger" *ngIf="profileForm.controls.sometext.hasError('required') && (profileForm.controls.sometext.dirty || profileForm.controls.sometext.touched)">This field is required</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Email ID &nbsp;:</label>
+                    <div class="col-sm-6 p-t-8" *ngIf="!edit">
+                        <span>abc@gmail.com</span>
+                    </div>
+                    <div class="col-sm-6" *ngIf="edit">
+                        <input class="form-control" type="text" formControlName="sometext" />
+                        <span class="text-danger" *ngIf="profileForm.controls.sometext.hasError('required') && (profileForm.controls.sometext.dirty || profileForm.controls.sometext.touched)">This field is required</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Seed License No. &nbsp;:</label>
+                    <div class="col-sm-6 p-t-8" *ngIf="!edit">
+                        <span>123456</span>
+                    </div>
+                    <div class="col-sm-6" *ngIf="edit">
+                        <input class="form-control" type="text" formControlName="sometext" />
+                        <span class="text-danger" *ngIf="profileForm.controls.sometext.hasError('required') && (profileForm.controls.sometext.dirty || profileForm.controls.sometext.touched)">This field is required</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Chemical Fertilizer License No. &nbsp;:</label>
+                    <div class="col-sm-6 p-t-8" *ngIf="!edit">
+                        <span>123456</span>
+                    </div>
+                    <div class="col-sm-6" *ngIf="edit">
+                        <input class="form-control" type="text" formControlName="sometext" />
+                        <span class="text-danger" *ngIf="profileForm.controls.sometext.hasError('required') && (profileForm.controls.sometext.dirty || profileForm.controls.sometext.touched)">This field is required</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Medicine License No. &nbsp;:</label>
+                    <div class="col-sm-6 p-t-8" *ngIf="!edit">
+                        <span>123456</span>
+                    </div>
+                    <div class="col-sm-6" *ngIf="edit">
+                        <input class="form-control" type="text" formControlName="sometext" />
+                        <span class="text-danger" *ngIf="profileForm.controls.sometext.hasError('required') && (profileForm.controls.sometext.dirty || profileForm.controls.sometext.touched)">This field is required</span>
+                    </div>
+                </div>
+                <div class="text-center" *ngIf="edit">
+                    <button class="btn btn-primary mt-lg" type="submit">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
