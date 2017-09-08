@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ManageProfileComponent } from './manage-profile/manage-profile.component';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ModalModule } from 'ngx-bootstrap/modal';
 const routes: Routes = [
   { path: '', component: ManageProfileComponent },
 ];
@@ -11,7 +12,8 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ModalModule.forRoot()
   ],
   declarations: [ManageProfileComponent],
   exports: [
