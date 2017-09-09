@@ -3,12 +3,15 @@
 </div>
 <div class="home-container">
     <div class="jumbotron profilejumbotron">
+        <div class="text-center" *ngIf="edit">
+            <h3>Edit Profile</h3>
+        </div>
         <div class="text-right" *ngIf="!edit">
             <a class="btn btn-link" (click)="openModal(template)"><strong class="f-15"><i class="fa fa-lock" aria-hidden="true" ></i> Change Password</strong></a>
             <a class="btn btn-link" (click)="editProfile()"><strong class="f-15"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Profile</strong></a>
-
+            <br />
+            <br />
         </div>
-        <br />
         <br />
         <div class="row">
             <form [formGroup]="profileForm" class="form-validate form-horizontal" (submit)="saveProfile()" novalidate="">
